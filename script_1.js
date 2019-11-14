@@ -1,11 +1,6 @@
-// Début des exos
-
-// Exo n° 1
 console.log("Exo n°1 :");
 console.log("Bonjour monde");
 
-
-// Exo n°1 bis
 console.log("\nExo n°1 bis :");
 
 // On demande le prénom de l'utilisateur et on le met dans la variable 'firstName'

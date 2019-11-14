@@ -17,9 +17,15 @@ const books = [
 
 // -------------------------------------------
 // Est-ce que tous les livres ont été au moins empruntés une fois ?
+// -------------------------------------------
 
+// On définit un tableau qui contiendra les livres non empruntés
 let nonRentedBooksArray = []
+
+// On parcourt chaque élément du tableau 'books'
+// Chaque objet est mis dans la variable 'book'
 for (const book of books) {
+  // Si le livre n'a jamais été emprunté, on le met dans le tableau des livres qui n'ont jamais été empruntés.
   if (book.rented == 0) {
     nonRentedBooksArray.push(book);
   }
@@ -34,6 +40,8 @@ if (nonRentedBooksArray.length == 0) {
 
 // -------------------------------------------
 // Quel est le livre le plus emprunté ?
+// -------------------------------------------
+
 let maxRented = 0
 let titleMaxRented = ""
 
@@ -53,6 +61,7 @@ console.log(`Le livre le plus emprunté est ${titleMaxRented} (emprunté ${maxRe
 
 // -------------------------------------------
 // Quel est le livre le moins emprunté ?
+// -------------------------------------------
 
 let titleMinRented = "";
 // On initialise la variable minRented.
@@ -79,6 +88,8 @@ console.log(`Le livre le moins emprunté est ${titleMinRented} (emprunté ${minR
 
 // -------------------------------------------
 // Quel est le livre avec l'ID 873495 ?
+// -------------------------------------------
+
 for (const book of books) {
   if (book.id == 873495) {
     console.log(book.id);
@@ -90,9 +101,12 @@ for (const book of books) {
 
 // -------------------------------------------
 // Suppression du livre avec l'ID 133712
+// -------------------------------------------
+
 for (const index in books) {
   if (books[index].id == 133712) {
     delete books[index];
+    // books.splice(index, 1);
     }
 }
 
@@ -101,3 +115,4 @@ for (const index in books) {
 
 // -------------------------------------------
 // Trier les livres par ordre alphabétique
+// -------------------------------------------
